@@ -1,0 +1,470 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://sophialearnscode.dev/schemas/lesson.schema.yaml"
+title: Sophia Learns Code lesson
+description: >-
+  Versioned contract for an interactive lesson. The schema captures instructional
+  intent, execution content, evidence, review, transfer, accessibility, and safety.
+type: object
+additionalProperties: false
+required:
+  - id
+  - version
+  - title
+  - phase
+  - estimated_minutes
+  - objective
+  - skills
+  - prerequisites
+  - mental_model
+  - misconceptions
+  - interactions
+  - mastery_evidence
+  - review
+  - transfer
+  - accessibility
+  - safety
+properties:
+  id:
+    type: string
+    pattern: "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+  version:
+    type: integer
+    minimum: 1
+  status:
+    type: string
+    enum:
+      - draft
+      - pilot
+      - validated
+      - published
+      - retired
+    default: draft
+  title:
+    type: string
+    minLength: 1
+  subtitle:
+    type: string
+  phase:
+    type: string
+    pattern: "^phase-[0-9]+[a-z]?$"
+  estimated_minutes:
+    type: integer
+    minimum: 1
+    maximum: 180
+  learner_context:
+    type: string
+  objective:
+    type: object
+    additionalProperties: false
+    required:
+      - behavior
+      - conditions
+      - quality
+    properties:
+      behavior:
+        type: string
+        minLength: 1
+      conditions:
+        type: string
+        minLength: 1
+      quality:
+        type: string
+        minLength: 1
+  skills:
+    type: object
+    additionalProperties: false
+    required:
+      - primary
+      - supporting
+    properties:
+      primary:
+        type: string
+        minLength: 1
+      supporting:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+  prerequisites:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  allowed_concepts:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  mental_model:
+    type: object
+    additionalProperties: false
+    required:
+      - summary
+      - visible_state
+    properties:
+      summary:
+        type: string
+        minLength: 1
+      visible_state:
+        type: array
+        minItems: 1
+        uniqueItems: true
+        items:
+          type: string
+      later_refinement:
+        type: string
+  misconceptions:
+    type: array
+    items:
+      $ref: "#/$defs/misconception"
+  starter_code:
+    type: string
+  reference_solution:
+    type: string
+  interactions:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/interaction"
+  tests:
+    type: array
+    items:
+      $ref: "#/$defs/test"
+  mastery_evidence:
+    type: object
+    additionalProperties: false
+    required:
+      - introduced
+      - guided
+      - independent
+    properties:
+      introduced:
+        type: array
+        items:
+          type: string
+      guided:
+        type: array
+        items:
+          type: string
+      independent:
+        type: array
+        minItems: 1
+        items:
+          type: string
+      durable:
+        type: array
+        items:
+          type: string
+      transferable:
+        type: array
+        items:
+          type: string
+  review:
+    type: object
+    additionalProperties: false
+    required:
+      - same_session
+      - delayed
+    properties:
+      same_session:
+        type: array
+        items:
+          $ref: "#/$defs/reviewItem"
+      delayed:
+        type: array
+        items:
+          $ref: "#/$defs/reviewItem"
+  transfer:
+    type: object
+    additionalProperties: false
+    required:
+      - near
+      - far
+    properties:
+      near:
+        type: array
+        items:
+          type: string
+      far:
+        type: array
+        items:
+          type: string
+  rewards:
+    type: object
+    additionalProperties: false
+    properties:
+      capability_evidence:
+        type: array
+        items:
+          type: string
+      artifact:
+        type: string
+      celebration:
+        type: string
+      unlocks:
+        type: array
+        items:
+          type: string
+  accessibility:
+    type: object
+    additionalProperties: false
+    required:
+      - keyboard
+      - screen_reader
+      - reduced_motion
+      - non_color_equivalent
+    properties:
+      keyboard:
+        type: string
+      screen_reader:
+        type: string
+      reduced_motion:
+        type: string
+      non_color_equivalent:
+        type: string
+      captions:
+        type: string
+      timing:
+        type: string
+  safety:
+    type: object
+    additionalProperties: false
+    required:
+      - data_classification
+      - cyber_scope
+      - academic_integrity
+      - privacy_notes
+    properties:
+      data_classification:
+        type: string
+        enum:
+          - none
+          - synthetic
+          - public-licensed
+          - private-protected
+      cyber_scope:
+        type: string
+      academic_integrity:
+        type: string
+      privacy_notes:
+        type: string
+  sources:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - title
+        - url
+        - purpose
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+          format: uri
+        purpose:
+          type: string
+  author_notes:
+    type: string
+
+$defs:
+  misconception:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - description
+      - observable_signatures
+      - feedback_strategy
+      - repair_task
+    properties:
+      id:
+        type: string
+        pattern: "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+      description:
+        type: string
+      observable_signatures:
+        type: array
+        minItems: 1
+        items:
+          type: string
+      disconfirming_evidence:
+        type: array
+        items:
+          type: string
+      feedback_strategy:
+        type: string
+      repair_task:
+        type: string
+
+  interaction:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - type
+      - purpose
+      - prompt
+    properties:
+      id:
+        type: string
+        pattern: "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+      type:
+        type: string
+        enum:
+          - retrieval
+          - briefing
+          - concept-card
+          - worked-example
+          - predict-output
+          - trace
+          - parsons
+          - fill-gap
+          - modify-code
+          - bug-hunt
+          - repair
+          - write-code
+          - explain
+          - compare
+          - transfer
+          - checkride
+          - debrief
+      purpose:
+        type: string
+      prompt:
+        type: string
+      code:
+        type: string
+      expected_output:
+        type: string
+      options:
+        type: array
+        items:
+          type: string
+      expected_response:
+        type: string
+      visible_state:
+        type: array
+        items:
+          type: string
+      tests:
+        type: array
+        items:
+          type: string
+      hints:
+        type: array
+        items:
+          $ref: "#/$defs/hint"
+      feedback_codes:
+        type: array
+        items:
+          type: string
+      completion_rule:
+        type: string
+      support_level:
+        type: string
+        enum:
+          - full
+          - guided
+          - light
+          - none
+      optional:
+        type: boolean
+        default: false
+      metadata:
+        type: object
+        additionalProperties: true
+
+  hint:
+    type: object
+    additionalProperties: false
+    required:
+      - level
+      - kind
+      - message
+    properties:
+      level:
+        type: integer
+        minimum: 0
+        maximum: 6
+      kind:
+        type: string
+        enum:
+          - reflection
+          - observation
+          - concept
+          - representation
+          - partial-code
+          - explained-solution
+          - parallel-recovery
+      message:
+        type: string
+      reveal_code:
+        type: string
+
+  test:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - visibility
+      - kind
+      - assertion
+      - purpose
+    properties:
+      id:
+        type: string
+      visibility:
+        type: string
+        enum:
+          - visible
+          - hidden
+          - author-only
+      kind:
+        type: string
+        enum:
+          - stdout
+          - return-value
+          - exception
+          - property
+          - trace
+          - ast
+          - rubric
+      assertion:
+        type: string
+      purpose:
+        type: string
+      feedback_code:
+        type: string
+
+  reviewItem:
+    type: object
+    additionalProperties: false
+    required:
+      - timing
+      - form
+      - prompt
+      - support
+    properties:
+      timing:
+        type: string
+      form:
+        type: string
+        enum:
+          - recognition
+          - prediction
+          - trace
+          - repair
+          - generation
+          - explanation
+          - transfer
+      prompt:
+        type: string
+      support:
+        type: string
+        enum:
+          - full
+          - guided
+          - light
+          - none

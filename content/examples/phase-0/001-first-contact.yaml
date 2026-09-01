@@ -1,0 +1,448 @@
+id: phase-0.first-contact
+version: 1
+status: draft
+title: First Contact
+subtitle: Bring the Python console online
+phase: phase-0
+estimated_minutes: 15
+learner_context: >-
+  A college-aged learner with no assumed programming, editor, console, terminal,
+  or debugging experience.
+
+objective:
+  behavior: >-
+    Run, personalize, predict, trace, intentionally break, and repair a tiny
+    Python program, then explain what print caused and where the output appeared.
+  conditions: >-
+    Using the browser lesson workspace with authored hints available and no local
+    Python installation.
+  quality: >-
+    Complete the final parallel task without a solution reveal and accurately
+    distinguish code from console output.
+
+skills:
+  primary: python.first-execution
+  supporting:
+    - interface.code-editor
+    - interface.console
+    - python.print-call
+    - python.string-literal
+    - debugging.syntax-observation
+
+prerequisites: []
+
+allowed_concepts:
+  - code
+  - output
+  - run
+  - print
+  - text-value
+  - quotation-mark
+  - parenthesis
+  - execution-order
+  - syntax-error
+
+mental_model:
+  summary: >-
+    Python reads the program from the first line downward. A print call sends the
+    value inside its parentheses to the console. The code remains in the editor;
+    the result appears in the console.
+  visible_state:
+    - current source line
+    - value passed to print
+    - console output produced so far
+  later_refinement: >-
+    Later lessons refine function calls, arguments, expression evaluation, and
+    control flow. This lesson does not claim that every program always executes
+    every line from top to bottom.
+
+misconceptions:
+  - id: code-and-output-are-the-same-place
+    description: The learner expects the editor text to transform into output.
+    observable_signatures:
+      - clicks or watches the editor after Run and does not locate the console
+      - describes the printed message as replacing the code
+    disconfirming_evidence:
+      - points to code and output separately
+      - explains that print sends a value to the console
+    feedback_strategy: >-
+      Briefly highlight the source line, animate a path to the console, and label
+      both regions in text without replaying the entire onboarding.
+    repair_task: Run a new message and identify where the code remained and where the result appeared.
+
+  - id: quotation-marks-are-decoration
+    description: The learner does not yet understand that matching quotes delimit text.
+    observable_signatures:
+      - deletes one quote and expects the same output
+      - adds unquoted words after print
+      - cannot identify the unmatched punctuation from the error panel
+    disconfirming_evidence:
+      - repairs an unmatched quote
+      - explains that Python needs a beginning and ending boundary for the text
+    feedback_strategy: >-
+      Highlight the opening quote and the missing partner, then state what Python
+      expected and where it reached the end of the line.
+    repair_task: Add the missing closing quotation mark and rerun successfully.
+
+  - id: print-means-copy-the-example
+    description: The learner imitates the line without understanding the editable value.
+    observable_signatures:
+      - repeatedly reruns the unchanged starter program
+      - asks which exact message must be typed when free choice is allowed
+    disconfirming_evidence:
+      - chooses and runs a personalized message
+      - predicts how changing the text changes only the output value
+    feedback_strategy: >-
+      Offer two playful examples, then explicitly permit any safe message and keep
+      the code shell unchanged.
+    repair_task: Replace only the text value with a personally chosen message.
+
+starter_code: |
+  print("Hello, Sophia!")
+
+reference_solution: |
+  print("Case opened.")
+
+interactions:
+  - id: arrival-briefing
+    type: briefing
+    purpose: Establish a clear goal and orient the learner without a lecture.
+    prompt: >-
+      Mission 001: First Contact. Bring the console online by running the message
+      already waiting in the code area.
+    completion_rule: Learner activates Run or keyboard equivalent.
+    support_level: full
+    metadata:
+      labels_visible:
+        - Code area
+        - Run
+        - Console
+      target_seconds_to_action: 45
+
+  - id: first-run
+    type: worked-example
+    purpose: Establish immediate causal control between source code and output.
+    prompt: Run the program and watch where its message appears.
+    code: |
+      print("Hello, Sophia!")
+    expected_output: |
+      Hello, Sophia!
+    visible_state:
+      - current source line
+      - string value entering print
+      - console output
+    completion_rule: Runtime succeeds and the learner identifies the console.
+    support_level: full
+    metadata:
+      celebration: subtle-console-online
+      maximum_celebration_seconds: 2
+
+  - id: make-it-yours
+    type: modify-code
+    purpose: Convert copying into ownership and reveal that the text value is editable.
+    prompt: Replace the greeting with any message you would enjoy sending to the console.
+    code: |
+      print("Hello, Sophia!")
+    tests:
+      - program parses
+      - program produces exactly one non-empty output line
+      - output differs from the starter greeting
+    hints:
+      - level: 0
+        kind: reflection
+        message: Which words are currently appearing in the console?
+      - level: 1
+        kind: observation
+        message: The editable message sits between the two quotation marks.
+      - level: 3
+        kind: representation
+        message: Keep `print("` at the beginning and `")` at the end. Change only the words in the middle.
+    completion_rule: A safe personalized message runs successfully.
+    support_level: guided
+
+  - id: predict-two-lines
+    type: predict-output
+    purpose: Establish top-to-bottom execution and commitment before revelation.
+    prompt: How many output lines will appear, and which message will appear first?
+    code: |
+      print("Console online")
+      print("Case ready")
+    options:
+      - One line, Console online
+      - One line, Case ready
+      - Two lines, Console online first
+      - Two lines, Case ready first
+      - The program causes an error
+    expected_response: Two lines, Console online first
+    completion_rule: Learner submits a prediction, then runs and inspects the trace.
+    support_level: light
+    metadata:
+      allow_not_sure: true
+      confidence_prompt: true
+
+  - id: trace-two-lines
+    type: trace
+    purpose: Make execution order and cumulative console output visible.
+    prompt: Step forward and watch one source line add one output line at a time.
+    code: |
+      print("Console online")
+      print("Case ready")
+    visible_state:
+      - current source line
+      - current print value
+      - console output so far
+    completion_rule: Learner advances through both steps and answers which line ran first.
+    support_level: guided
+    metadata:
+      text_equivalent_required: true
+      reduced_motion_mode: instant-state-swap
+
+  - id: create-the-clue
+    type: bug-hunt
+    purpose: Introduce errors as inspectable evidence in a controlled setting.
+    prompt: >-
+      Remove the final quotation mark after `ready`, run the program, and inspect
+      what Python expected but could not find.
+    code: |
+      print("Case ready")
+    expected_response: Python cannot find the closing boundary of the text.
+    completion_rule: Runtime returns the intended syntax-error feedback code.
+    support_level: guided
+    metadata:
+      expected_error: unterminated-string-literal
+      error_tone: calm-investigative
+
+  - id: repair-the-clue
+    type: repair
+    purpose: Complete the expectation-observation-repair loop without answer replacement.
+    prompt: Restore the missing punctuation and bring the console back online.
+    code: |
+      print("Case ready)
+    tests:
+      - program parses
+      - stdout equals Case ready followed by one newline
+    hints:
+      - level: 0
+        kind: reflection
+        message: Python says the text began but did not end. Where does the text begin?
+      - level: 1
+        kind: observation
+        message: The opening quotation mark has no matching partner before the closing parenthesis.
+      - level: 2
+        kind: concept
+        message: A text value needs matching quotation marks around it.
+      - level: 3
+        kind: representation
+        message: |
+          opening quote             missing partner
+                 ↓                         ↓
+          print("Case ready         ?       )
+      - level: 4
+        kind: partial-code
+        message: Add one `"` immediately after the word `ready`.
+      - level: 5
+        kind: explained-solution
+        message: The repaired line is `print("Case ready")`. The two quotes mark the beginning and end of the text value.
+        reveal_code: |
+          print("Case ready")
+      - level: 6
+        kind: parallel-recovery
+        message: Repair a fresh greeting with the same missing-quote pattern.
+    feedback_codes:
+      - unmatched-quote
+      - output-mismatch
+      - runtime-success
+    completion_rule: Program runs and produces the intended output.
+    support_level: guided
+
+  - id: explain-the-machine
+    type: explain
+    purpose: Consolidate the code-output distinction and the cause of the error.
+    prompt: >-
+      In your own words, what did `print` cause, where did the result appear, and
+      why did the broken version fail?
+    expected_response: >-
+      The response identifies that print sent a text value to the console and that
+      the broken version lacked a matching quotation mark.
+    completion_rule: Response meets the concept rubric or is clarified through one targeted follow-up.
+    support_level: light
+    metadata:
+      response_modes:
+        - text
+        - voice-with-transcript
+        - annotated-diagram
+      rubric_dimensions:
+        - code-output distinction
+        - print causality
+        - matching quote explanation
+
+  - id: first-checkride
+    type: checkride
+    purpose: Gather no-hint evidence on a fresh but closely related task.
+    prompt: >-
+      Write one line of Python that sends the message `Investigation started` to
+      the console. Run it and repair any error before submitting.
+    tests:
+      - program parses
+      - stdout equals Investigation started followed by one newline
+    completion_rule: Visible deterministic tests pass before any solution-level hint is opened.
+    support_level: none
+    metadata:
+      hints_locked_until_submission: true
+      scratch_runs_allowed: true
+
+  - id: debrief-and-choice
+    type: debrief
+    purpose: Make capability visible and offer a natural stop with learner autonomy.
+    prompt: >-
+      You can now run a Python instruction, change its text, predict execution
+      order, and repair an unmatched quote. Choose your next route or stop here.
+    options:
+      - Access Badge route
+      - Expense Case route
+      - General Python route
+      - Stop and return later
+    completion_rule: Learner selects a route or clean stop.
+    support_level: none
+    metadata:
+      autoplay_next_lesson: false
+
+  - id: parallel-recovery-after-reveal
+    type: repair
+    purpose: Restore active evidence after an explained solution was revealed.
+    prompt: Repair and run this fresh message.
+    code: |
+      print("Access granted)
+    tests:
+      - program parses
+      - stdout equals Access granted followed by one newline
+    completion_rule: Deterministic tests pass without another explained solution.
+    support_level: light
+    optional: true
+    metadata:
+      show_only_after_solution_reveal: true
+
+  - id: near-transfer-access-banner
+    type: transfer
+    purpose: Apply the same structure with new surface details.
+    prompt: Print a one-line access banner containing a message of your choice.
+    completion_rule: One valid print call produces one non-empty line.
+    support_level: none
+    optional: true
+
+  - id: far-transfer-transaction-label
+    type: transfer
+    purpose: Connect the first programming action to a different domain without adding complexity.
+    prompt: Print the label `Transaction requires review` exactly as written.
+    completion_rule: Deterministic output test passes.
+    support_level: none
+    optional: true
+
+tests:
+  - id: reference-parses
+    visibility: author-only
+    kind: exception
+    assertion: reference solution completes without an exception
+    purpose: Prevent publication of a broken reference solution.
+    feedback_code: author-reference-error
+
+  - id: checkride-output
+    visibility: visible
+    kind: stdout
+    assertion: stdout equals "Investigation started\n"
+    purpose: Define the exact first-checkride contract.
+    feedback_code: checkride-output-mismatch
+
+  - id: no-extra-output
+    visibility: hidden
+    kind: stdout
+    assertion: stdout contains exactly one line for the checkride
+    purpose: Distinguish the requested artifact from unrelated output.
+    feedback_code: unexpected-extra-output
+
+mastery_evidence:
+  introduced:
+    - completes the first run
+    - identifies the console as the output location
+    - submits the two-line prediction
+  guided:
+    - personalizes a valid message
+    - steps through both print calls
+    - repairs the designed error with authored hints below full reveal
+  independent:
+    - writes and runs the fresh checkride print call without solution-level hints
+    - accurately distinguishes code from output in the explanation
+  durable:
+    - recreates a valid print call after at least one day without reopening the lesson
+    - repairs a fresh unmatched-quote example after a delay
+  transferable:
+    - uses the same structure in a different mission flavor and explains what remained the same
+
+review:
+  same_session:
+    - timing: near lesson end
+      form: prediction
+      prompt: Predict the exact output of two new print calls.
+      support: none
+    - timing: after any full solution reveal
+      form: repair
+      prompt: Repair a different unmatched-quote example.
+      support: light
+  delayed:
+    - timing: approximately 1 day
+      form: generation
+      prompt: Write one line that prints a message of your choice.
+      support: none
+    - timing: approximately 3 days
+      form: repair
+      prompt: Repair an unmatched quote in a new message.
+      support: none
+    - timing: approximately 7 days
+      form: explanation
+      prompt: Explain the difference between the code area and console output.
+      support: none
+
+transfer:
+  near:
+    - Print a different greeting in the same workspace.
+    - Repair the same syntax pattern using different text.
+  far:
+    - Print an access-control banner in a cybersecurity mission.
+    - Print a transaction-review label in a financial-forensics mission.
+
+rewards:
+  capability_evidence:
+    - First successful execution
+    - First personalized program
+    - First repaired syntax error
+  artifact: A saved one-line case banner chosen by the learner.
+  celebration: A brief console-online response followed by a visible explanation of what was earned.
+  unlocks:
+    - Names and Values lesson
+    - choice of cyber, finance, or general surface theme
+
+accessibility:
+  keyboard: >-
+    Run, prediction, trace navigation, error inspection, hints, repair, submission,
+    and route choice are fully keyboard operable with visible focus.
+  screen_reader: >-
+    Editor, Run, console, current line, output, error location, and trace state have
+    semantic labels and live-region announcements that do not duplicate excessively.
+  reduced_motion: >-
+    The line-to-console animation becomes an immediate state change with an optional
+    textual sequence.
+  non_color_equivalent: >-
+    Current line, success, and error states use labels, icons, and structure in addition to color.
+  captions: No required audio. Any optional narration includes synchronized captions and transcript.
+  timing: No time limit; target times are product-observation measures only.
+
+safety:
+  data_classification: synthetic
+  cyber_scope: No offensive-security content or external targets.
+  academic_integrity: This foundational lesson is original practice and does not solve a class assignment.
+  privacy_notes: The personalized message remains local unless the learner explicitly saves it to a protected account.
+
+author_notes: >-
+  Keep the first Run control visually obvious without turning it into a giant game
+  button. Observe whether requiring a prediction feels purposeful or like a gate.
+  The early intentional error is a hypothesis to test, not permanent doctrine.
