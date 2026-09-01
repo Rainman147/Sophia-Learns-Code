@@ -1,175 +1,199 @@
 # Sophia Learns Code
 
-> A fun, interactive, evidence-informed Python learning journey from the very first `print()` to independent, advanced programming in cybersecurity and financial forensics.
+> A beautiful, adaptive mystery-investigation game in which real Python is how the learner examines evidence, tests theories, repairs tools, and solves cyber and financial-forensics cases from absolute zero through advanced engineering.
 
-**Status:** pre-build product design and validation  
-**Initial learner:** a college student beginning Python from absolute zero  
-**Working experience concept:** **Python Investigator: Flight Deck**  
-**Repository purpose:** preserve the product vision, learning design, curriculum, architecture, research, decisions, experiments, and build roadmap so the project can improve without losing its compass.
+**Status:** canonical product rebaseline and pre-build discovery  
+**Initial learner:** a college-aged Python beginner studying cybersecurity and financial forensic analysis  
+**Working experience identity:** **Python Investigator**  
+**Canonical vision:** [`VISION.md`](VISION.md)
 
-## The mission
+## The idea
 
-Most coding courses teach recognition: watch an explanation, copy a solution, pass a friendly quiz, and feel productive. The learner then meets a blank editor and the floor disappears.
+Sophia Learns Code is not a course with game decorations and not a mystery game interrupted by quizzes.
 
-Sophia Learns Code will train a different ability:
+Python is the game control system:
 
-- understand what the computer is doing;
-- predict code before running it;
-- turn an idea into small, testable steps;
-- debug unfamiliar programs without panic;
-- retrieve important concepts after time has passed;
-- transfer the same idea into a new situation;
-- build useful software independently; and
-- explain why a solution works and where it may fail.
+```text
+Case presents evidence
+        ↓
+Learner predicts, writes, or repairs Python
+        ↓
+Real Python executes
+        ↓
+The investigation world changes from the result
+        ↓
+Learner inspects what happened
+        ↓
+The case advances or reveals a new question
+        ↓
+Capability, rewards, tools, and future cases evolve
+```
 
-The destination is not “course completed.” The destination is **capable without the course**.
+The platform succeeds when the learner can work without it.
+
+## Experience structure
+
+```text
+Journey
+└── Phase
+    └── Case
+        └── Mission
+            └── Encounter
+```
+
+The persistent hub is the **Operations Center**. The learner codes in the **Investigation Console**, inspects execution in **Computer's Mind**, completes reduced-support **Field Tests**, sees progress through a transparent **Capability Map**, and preserves real work in the **Case Archive**.
+
+## Learning loop
+
+```text
+Curious question
+  → concrete mental model
+  → prediction
+  → real execution
+  → visible consequence
+  → investigation and repair
+  → independent application
+  → explanation
+  → changed-context transfer
+  → delayed retrieval
+  → durable capability
+```
+
+Lessons are designed around action rather than passive pages. Important concepts move through worked examples, prediction, code ordering, debugging, modification, independent generation, transfer, and review after time has passed.
+
+## Game progression
+
+Four systems remain deliberately separate:
+
+- **XP** records meaningful momentum.
+- **Mastery** records capability evidence.
+- **Unlocks** open tools, routes, and new possibilities.
+- **Artifacts** preserve what the learner actually built.
+
+XP never grants mastery. Badges evolve from discovered to practiced, proven, durable, transferred, and integrated, with inspectable evidence behind every stage.
+
+The best rewards are new powers:
+
+- Live Lab;
+- execution time travel;
+- Debugger Lens;
+- Test Chamber;
+- Evidence Vault;
+- Pattern Scanner;
+- Pro Workspace; and
+- the eventual local Field Kit for terminal, Git, and GitHub work.
+
+There are no loot boxes, energy systems, lost progress, streak shame, public ranking pressure, or XP farming.
+
+## First case
+
+# Case 001: The Midnight Badge
+
+A synthetic badge event occurred at an unusual hour. The record alone does not prove wrongdoing. The learner brings the console online and builds tools to inspect what happened.
+
+| Mission | Python capability | Case contribution |
+|---|---|---|
+| First Contact | `print()`, strings, code versus output | activate the console |
+| Identity Tag | values and assignment | store case facts |
+| Access Rule | comparisons and `if`/`else` | classify one event |
+| Repeated Attempts | `for`, `range`, changing state | inspect several attempts |
+| Case Field Test | combined foundation skills | build a small review program |
+
+The finished program enters the Case Archive. Delayed and changed-context tasks test whether the ideas remained usable.
 
 ## Product promise
 
 ```text
 Assume nothing.
 Make invisible execution visible.
-Let the learner do something every few moments.
+Let the learner act every few moments.
 Make errors useful and emotionally safe.
 Reward demonstrated capability, not button pressing.
+Make the story respond to actual Python.
 Gradually remove help until independent work feels normal.
+Teach the platform's own exit into professional tools.
 ```
 
-## The learning loop
+## Creative direction
 
-```mermaid
-flowchart LR
-    A[Curious mission] --> B[Concrete mental model]
-    B --> C[Predict]
-    C --> D[Run and visualize]
-    D --> E[Modify]
-    E --> F[Debug]
-    F --> G[Build independently]
-    G --> H[Explain why]
-    H --> I[Transfer to a new case]
-    I --> J[Retrieve later]
-    J --> K[Durable mastery]
-    K --> A
-```
+The experience should feel polished, precise, lightly cinematic, adult, warm, and futuristic without falling into hacker clichés.
 
-A lesson is not a page of prose. It is a short sequence of meaningful actions: choose, predict, arrange, run, inspect, repair, create, explain, and revisit.
+UI, graphics, motion, sound, writing, badges, videos, and progress must share one identity. Motion is used to explain causality, preserve context, acknowledge actions, and mark meaningful achievements. Every instructional animation has a reduced-motion and semantic text alternative.
 
-## What makes it fun
+The initial rendering direction favors accessible React UI, HTML, CSS, SVG, and one general motion system. Rive, GSAP, PixiJS, Phaser, Remotion, and other specialized tools must clear explicit prototype gates before adoption.
 
-The platform uses a mature investigation-and-flight-deck tone rather than a childish cartoon skin. Lessons become missions, projects become case files, major assessments become checkrides, and the curriculum becomes an explorable capability map.
+## Architecture posture
 
-Fun must emerge from:
-
-- quick visible cause and effect;
-- satisfying “I figured it out” moments;
-- playful code puzzles and bug hunts;
-- meaningful choices and alternate missions;
-- a responsive execution visualizer;
-- authentic cyber and financial mysteries;
-- surprising but non-manipulative discoveries;
-- clear progress toward real independence; and
-- projects worth showing another person.
-
-Points, badges, streaks, and unlocks are allowed only when they make real learning more legible. There will be no streak shame, loot boxes, public ranking pressure, or XP farming.
-
-## Zero to advanced
+The leading hypothesis is:
 
 ```text
-First Run
-  → Values and Variables
-  → Decisions and Loops
-  → Collections and Functions
-  → Debugging and Problem Decomposition
-  → Files, CSV, JSON, Regular Expressions, Dates
-  → Testing, Git, Packages, APIs, SQL, Logging, Types
-  → Cybersecurity and Financial-Forensics Investigations
-  → Data Structures, Algorithms, Design and Architecture
-  → Generators, Decorators, Context Managers, Async and Concurrency
-  → Independent Portfolio-Grade Capstones
+Responsive web application
+  → React + strict TypeScript + Next.js candidate
+  → explicit mission state machine
+  → guided editor behind an adapter
+  → Pyodide inside a Web Worker
+  → deterministic evaluator and bounded trace
+  → semantic case events and accessible scene rendering
+  → local-first evidence store
 ```
 
-Every conceptual rung must be taught. No syntax teleportation.
+The project stabilizes domain contracts before selecting replaceable libraries. There is no production backend, full game engine, native shell, or custom Rust in the first validated case.
 
-## Product pillars
+Rust may enter later only at a measured stable boundary, such as a Tauri professional companion, profiled WebAssembly computation, a distributable CLI, or sandbox supervision.
 
-1. **Action before passivity.** The learner should rarely go more than a minute without making a meaningful decision.
-2. **Mental models before memorized syntax.** Show state, references, control flow, stack frames, and data movement.
-3. **Mastery before completion.** Watching a video is activity, not evidence of learning.
-4. **Support that fades.** Move from worked example to partial example to independent creation to novel transfer.
-5. **Feedback that teaches.** Explain the discrepancy, likely misconception, and useful next action.
-6. **AI as coach, never answer vending machine.** Deterministic tests judge code; AI diagnoses and teaches.
-7. **Authentic purpose.** Foundational concepts quickly connect to safe cybersecurity and financial-analysis cases.
-8. **Professional escape velocity.** The platform eventually transitions the learner into local Python, VS Code, Git, tests, and GitHub.
-9. **Evidence over vibes.** Retention and transfer are measured after delays.
-10. **Learner dignity.** Adult tone, privacy, accessibility, autonomy, and emotionally safe failure are non-negotiable.
+## Current build sequence
 
-## Documentation map
+The project is intentionally pausing before production implementation to clear a bounded set of design and architecture decisions.
 
-| Document | Purpose |
-|---|---|
-| [`docs/00-product-charter.md`](docs/00-product-charter.md) | Mission, audience, outcomes, principles, and boundaries |
-| [`docs/01-learner-journey.md`](docs/01-learner-journey.md) | The real human experience from first click to independence |
-| [`docs/02-learning-science.md`](docs/02-learning-science.md) | Evidence base and how each principle becomes a product behavior |
-| [`docs/03-interactivity-and-fun.md`](docs/03-interactivity-and-fun.md) | Interaction grammar, narrative, motivation, and humane gamification |
-| [`docs/04-curriculum-map.md`](docs/04-curriculum-map.md) | Full zero-to-advanced curriculum with exit criteria and projects |
-| [`docs/05-lesson-design-system.md`](docs/05-lesson-design-system.md) | Repeatable anatomy and quality bar for every lesson |
-| [`docs/06-mastery-and-assessment.md`](docs/06-mastery-and-assessment.md) | Evidence ledger, review scheduling, grading, and transfer |
-| [`docs/07-ai-tutor-spec.md`](docs/07-ai-tutor-spec.md) | Tutor modes, hint ladder, structured contract, integrity, and evaluations |
-| [`docs/08-technical-architecture.md`](docs/08-technical-architecture.md) | Browser execution, visualizer, services, data, security, and staging |
-| [`docs/09-mvp-roadmap.md`](docs/09-mvp-roadmap.md) | Smallest valuable vertical slice and staged delivery plan |
-| [`docs/10-sophia-pilot-plan.md`](docs/10-sophia-pilot-plan.md) | Observation protocol and success measures for the first learner |
-| [`docs/11-research-and-benchmarks.md`](docs/11-research-and-benchmarks.md) | Research ledger and patterns to study from existing platforms |
-| [`docs/12-risks-and-guardrails.md`](docs/12-risks-and-guardrails.md) | Pedagogical, privacy, AI, execution, cyber-safety, and product risks |
-| [`docs/13-decisions.md`](docs/13-decisions.md) | Durable product and architecture decision log |
-| [`ROADMAP.md`](ROADMAP.md) | Current phases, gates, and near-term priorities |
-| [`content/schema/lesson.schema.yaml`](content/schema/lesson.schema.yaml) | Versioned content contract |
-| [`content/examples/phase-0/001-first-contact.yaml`](content/examples/phase-0/001-first-contact.yaml) | Concrete absolute-zero lesson specimen |
+```text
+R0  Canonical project rebaseline
+R1  Visual and verbal identity
+R2  Mission-only versus Operations Center prototype
+R3  Motion and graphics pipeline
+R4  Tutorial-media pipeline
+R5  Mission-shell technology spike
+R6  Architecture checkpoint
+    ↓
+Production First Contact
+    ↓
+Identity Tag proves reuse
+    ↓
+The Midnight Badge proves the first case
+    ↓
+Immediate, delayed, and transfer validation
+    ↓
+Curriculum expansion decision
+```
+
+Narrow prototypes should still be beautiful and high quality. They are allowed to be throwaway, transferable, or production candidates, but they must declare which.
+
+## Documentation
+
+Start here:
+
+1. [`VISION.md`](VISION.md)
+2. [`docs/21-project-rebaseline-assessment.md`](docs/21-project-rebaseline-assessment.md)
+3. [`docs/18-game-and-narrative-design-system.md`](docs/18-game-and-narrative-design-system.md)
+4. [`docs/19-experience-identity-and-media-system.md`](docs/19-experience-identity-and-media-system.md)
+5. [`docs/20-prebuild-architecture-and-research-gates.md`](docs/20-prebuild-architecture-and-research-gates.md)
+6. [`docs/22-rebaseline-decisions.md`](docs/22-rebaseline-decisions.md)
+7. [`docs/handoffs/CODEX-PREBUILD-EXPERIENCE-REBASELINE.md`](docs/handoffs/CODEX-PREBUILD-EXPERIENCE-REBASELINE.md)
+8. [`docs/README.md`](docs/README.md) for the complete map
 
 ## North-star outcome
 
-After enough practice, Sophia should be able to receive an unfamiliar but bounded problem, inspect the evidence, define the steps, build a tested solution, explain her decisions, and identify the solution’s limits without depending on the tutor.
+**Independent success on a delayed, unfamiliar transfer task.**
 
-The primary product metric is therefore:
+The project also measures whether learners understand the interface, experience truthful and fast cause and effect, predict and explain behavior, recover from errors, understand their progress, value the rewards, and voluntarily return without coercion.
 
-> **Independent success on delayed, unfamiliar transfer tasks.**
+## Guardrails
 
-Supporting measures include hint depth, debugging quality, misconception recurrence, delayed retrieval, project quality, explanation quality, and successful movement into professional tools.
-
-## Initial build target
-
-The first implementation is intentionally narrow:
-
-- desktop-first web experience;
-- first 30 minutes from zero experience;
-- five polished lessons rather than fifty shallow ones;
-- browser-based Python execution;
-- predict, trace, arrange, modify, debug, and write interactions;
-- deterministic tests and misconception-aware feedback;
-- a minimal execution visualizer;
-- one constrained AI tutor mode;
-- a simple mastery evidence ledger; and
-- one tiny investigation that combines the first concepts.
-
-Video libraries, public leaderboards, native mobile apps, large social systems, and elaborate cloud cyber ranges are explicitly outside the first vertical slice.
-
-## Public-repository note
-
-This repository is currently public. Product documents and synthetic lesson content belong here. Real student records, assessment histories, conversations, credentials, school records, private datasets, or personally identifying analytics do not. Learner data must live in protected systems with explicit consent and deletion controls.
-
-## Working rules
-
-- Research claims should cite their sources.
-- New mechanics must state the learning behavior they are intended to cause.
-- Every lesson must define observable mastery evidence.
-- Every feature must be testable with a real learner.
-- AI-generated content requires deterministic validation and human review.
-- Decisions that change product direction belong in `docs/13-decisions.md`.
-- Build the learner loop before building platform ornamentation.
-
-## Current milestone
-
-**Milestone 0: Validate the first-session experience on paper and in a clickable/code-running prototype.**
-
-The next durable question is not “Which framework should we install?” It is:
-
-> Can a complete beginner have a genuine first win, understand what happened, enjoy the experience, recover from a small error, and voluntarily continue?
+- Real learner data never enters this public repository.
+- Real Python and deterministic tests remain executable truth.
+- AI coaching cannot override runtime evidence or secretly create mastery.
+- An anomaly is not presented as proof of fraud or malicious intent.
+- Cybersecurity cases use synthetic, authorized, defensive contexts.
+- Accessibility is part of every core interaction.
+- The game never manipulates return through lost rewards or artificial pressure.
+- A technology or mechanic must improve a learner-visible behavior or a measured stable boundary.
+- Broad curriculum production waits until the first case proves the experience.
