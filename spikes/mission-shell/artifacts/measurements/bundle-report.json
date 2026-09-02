@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-02T01:40:40.777Z",
+  "projectRoot": "C:\\Users\\Rainman\\Documents\\Codex\\2026-09-01\\model-gpt-5-6-sol-intelligence\\spikes\\mission-shell",
+  "buildStatus": "build-found",
+  "nextChunks": {
+    "totals": {
+      "count": 12,
+      "bytes": 1156689,
+      "gzipBytes": 360906
+    },
+    "files": [
+      {
+        "path": ".next/static/chunks/37raawzigo-61.js",
+        "bytes": 549410,
+        "gzipBytes": 176765,
+        "sha256": "3656bd32bad30c774c8d72f5348fe787e144e521cff1edf53f5461f04c213510",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/1mh6a-0e61pyc.js",
+        "bytes": 229156,
+        "gzipBytes": 71470,
+        "sha256": "c0930af826f989eea00dbaca15c1e4b3d3609b7b0bc5416a661a4948d8c26515",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/344n2zhqbh4pn.js",
+        "bytes": 165229,
+        "gzipBytes": 44980,
+        "sha256": "402430c6c1775a4891306a3de15db1afdf7b84a35170845737b21d7e469dbdd3",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/0cz1d0mv5g_q7.js",
+        "bytes": 112594,
+        "gzipBytes": 39520,
+        "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/19mx3mg6lkumu.js",
+        "bytes": 28907,
+        "gzipBytes": 7591,
+        "sha256": "170f3982866674a829571beec30cc23c69fcd36196739ff34b9d586b3ad73cd7",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/247h3pb_fqcza.css",
+        "bytes": 27651,
+        "gzipBytes": 5667,
+        "sha256": "911447b6e5f5109eae4802aff06cf3cca77c94909ddb779e768fcb8951acd750",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/3fntmmi971322.js",
+        "bytes": 14377,
+        "gzipBytes": 3653,
+        "sha256": "34ed6abf4c6d0d1bb3dc56d3f133d2a5dbc3a3c89c791deab314e27143ac14ce",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/turbopack-0td869ukh0v94.js",
+        "bytes": 9721,
+        "gzipBytes": 3851,
+        "sha256": "2044a698dd863755b40dad9d874936bb998d4429acd2603081b974dd6fe98e17",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/22i43cg4l4-dq.js",
+        "bytes": 8868,
+        "gzipBytes": 3606,
+        "sha256": "fcb087a55ce877e7cd977ebe8d78815d8c9921692c5d11292b7b222e61a70ca1",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/310vm2bl3xxpt.js",
+        "bytes": 5364,
+        "gzipBytes": 1969,
+        "sha256": "8a943b00599e56b53569f36f4341e3465ae7705c1391562cd6c7e1f290c0c387",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/2q_3nr181ftr2.css",
+        "bytes": 4799,
+        "gzipBytes": 1442,
+        "sha256": "3907b279d9d0b0dd54bb62421cc973533d4c95786dd8b49ef5270d3f3c1502cd",
+        "contentHashedFilename": false
+      },
+      {
+        "path": ".next/static/chunks/0a81qk10cxu-6.css",
+        "bytes": 613,
+        "gzipBytes": 392,
+        "sha256": "6bc5ad9aa846a771451892be2fbb181422f0eef992012a08df32b7c9e04156e4",
+        "contentHashedFilename": false
+      }
+    ],
+    "manifestFiles": {
+      "build": [
+        "static/chunks/0cz1d0mv5g_q7.js",
+        "static/chunks/19mx3mg6lkumu.js",
+        "static/chunks/1mh6a-0e61pyc.js",
+        "static/chunks/310vm2bl3xxpt.js",
+        "static/chunks/344n2zhqbh4pn.js",
+        "static/chunks/turbopack-0td869ukh0v94.js",
+        "static/sV8iWyshr8iIMQ0eqAckS/_buildManifest.js",
+        "static/sV8iWyshr8iIMQ0eqAckS/_clientMiddlewareManifest.js",
+        "static/sV8iWyshr8iIMQ0eqAckS/_ssgManifest.js"
+      ],
+      "app": []
+    },
+    "caveat": "Raw and gzip sizes are transfer proxies. Runtime parse/evaluation cost and shared route attribution need browser traces."
+  },
+  "copiedPyodideAssets": {
+    "status": "found",
+    "roots": [
+      "public/pyodide"
+    ],
+    "totals": {
+      "count": 5,
+      "bytes": 13526497
+    },
+    "files": [
+      {
+        "path": "public/pyodide/pyodide.asm.wasm",
+        "bytes": 9598218,
+        "sha256": "3a0a00dfeaa348ac20f9ef09904233d32d33f644339662d4af368f8a2010f37a",
+        "contentHashedFilename": false
+      },
+      {
+        "path": "public/pyodide/python_stdlib.zip",
+        "bytes": 2545564,
+        "sha256": "80c5be6babfe03297069703410c3c29404dcf2525d2b128746bae5536f94831f",
+        "contentHashedFilename": false
+      },
+      {
+        "path": "public/pyodide/pyodide.asm.mjs",
+        "bytes": 1250344,
+        "sha256": "2ac5eba365ec12839c75c03b39b3be1dd63b798852cc460b014b52238be042f7",
+        "contentHashedFilename": false
+      },
+      {
+        "path": "public/pyodide/pyodide-lock.json",
+        "bytes": 114440,
+        "sha256": "3fdaef09e9e365c85e002737720f8d0ab8f278c1c244a2dde6a37663cf488ad4",
+        "contentHashedFilename": false
+      },
+      {
+        "path": "public/pyodide/pyodide.mjs",
+        "bytes": 17931,
+        "sha256": "69e3f6ccec3e14b465df60be577ca62f536251406b9a00cce019eac5252a2495",
+        "contentHashedFilename": false
+      }
+    ],
+    "cachingReview": "Inspect deployed Cache-Control headers separately. Copied stable filenames are not proof of immutable caching."
+  },
+  "directDependencyLedger": {
+    "source": "package-lock.json root dependency declarations and matching direct package metadata",
+    "entries": [
+      {
+        "name": "@axe-core/playwright",
+        "requested": "4.13.0",
+        "resolvedVersion": "4.13.0",
+        "license": "MPL-2.0",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/@axe-core/playwright/-/playwright-4.13.0.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@codemirror/commands",
+        "requested": "6.11.0",
+        "resolvedVersion": "6.11.0",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/@codemirror/commands/-/commands-6.11.0.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@codemirror/lang-python",
+        "requested": "6.2.1",
+        "resolvedVersion": "6.2.1",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/@codemirror/lang-python/-/lang-python-6.2.1.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@codemirror/lint",
+        "requested": "6.9.7",
+        "resolvedVersion": "6.9.7",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/@codemirror/lint/-/lint-6.9.7.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@codemirror/state",
+        "requested": "6.7.2",
+        "resolvedVersion": "6.7.2",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/@codemirror/state/-/state-6.7.2.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@codemirror/view",
+        "requested": "6.43.10",
+        "resolvedVersion": "6.43.10",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/@codemirror/view/-/view-6.43.10.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@playwright/test",
+        "requested": "1.62.1",
+        "resolvedVersion": "1.62.1",
+        "license": "Apache-2.0",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/@playwright/test/-/test-1.62.1.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@testing-library/jest-dom",
+        "requested": "7.0.1",
+        "resolvedVersion": "7.0.1",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-7.0.1.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@testing-library/react",
+        "requested": "16.3.3",
+        "resolvedVersion": "16.3.3",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/@testing-library/react/-/react-16.3.3.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@testing-library/user-event",
+        "requested": "14.6.6",
+        "resolvedVersion": "14.6.6",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/@testing-library/user-event/-/user-event-14.6.6.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@types/node",
+        "requested": "26.4.1",
+        "resolvedVersion": "26.4.1",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/@types/node/-/node-26.4.1.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@types/react",
+        "requested": "19.2.18",
+        "resolvedVersion": "19.2.18",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/@types/react/-/react-19.2.18.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@types/react-dom",
+        "requested": "19.2.5",
+        "resolvedVersion": "19.2.5",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.5.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@vitejs/plugin-react",
+        "requested": "6.1.1",
+        "resolvedVersion": "6.1.1",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.1.1.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "@xstate/react",
+        "requested": "6.1.0",
+        "resolvedVersion": "6.1.0",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/@xstate/react/-/react-6.1.0.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "esbuild",
+        "requested": "0.28.2",
+        "resolvedVersion": "0.28.2",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/esbuild/-/esbuild-0.28.2.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "eslint",
+        "requested": "9.39.5",
+        "resolvedVersion": "9.39.5",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/eslint/-/eslint-9.39.5.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "eslint-config-next",
+        "requested": "16.3.4",
+        "resolvedVersion": "16.3.4",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-16.3.4.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "fake-indexeddb",
+        "requested": "6.2.5",
+        "resolvedVersion": "6.2.5",
+        "license": "Apache-2.0",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/fake-indexeddb/-/fake-indexeddb-6.2.5.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "idb",
+        "requested": "8.0.3",
+        "resolvedVersion": "8.0.3",
+        "license": "ISC",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/idb/-/idb-8.0.3.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "jsdom",
+        "requested": "30.0.1",
+        "resolvedVersion": "30.0.1",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/jsdom/-/jsdom-30.0.1.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "next",
+        "requested": "16.3.4",
+        "resolvedVersion": "16.3.4",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/next/-/next-16.3.4.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "pyodide",
+        "requested": "314.0.6",
+        "resolvedVersion": "314.0.6",
+        "license": "MPL-2.0",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/pyodide/-/pyodide-314.0.6.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "react",
+        "requested": "19.2.8",
+        "resolvedVersion": "19.2.8",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/react/-/react-19.2.8.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "react-dom",
+        "requested": "19.2.8",
+        "resolvedVersion": "19.2.8",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.2.8.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "typescript",
+        "requested": "6.0.3",
+        "resolvedVersion": "6.0.3",
+        "license": "Apache-2.0",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "vitest",
+        "requested": "4.1.11",
+        "resolvedVersion": "4.1.11",
+        "license": "MIT",
+        "developmentOnly": true,
+        "resolved": "https://registry.npmjs.org/vitest/-/vitest-4.1.11.tgz",
+        "integrityRecorded": true
+      },
+      {
+        "name": "xstate",
+        "requested": "5.32.6",
+        "resolvedVersion": "5.32.6",
+        "license": "MIT",
+        "developmentOnly": false,
+        "resolved": "https://registry.npmjs.org/xstate/-/xstate-5.32.6.tgz",
+        "integrityRecorded": true
+      }
+    ],
+    "reviewNote": "SPDX values are package metadata, not legal advice. UNKNOWN entries and notice/source obligations require owner review."
+  }
+}
