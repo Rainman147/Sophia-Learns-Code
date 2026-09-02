@@ -12,8 +12,8 @@ export interface RevisionedSource {
 }
 
 export function nextSourceRevision(current: SourceRevision): SourceRevision {
-  if (!Number.isSafeInteger(current) || current < 0) {
-    throw new RangeError("Source revision must be a non-negative safe integer.");
+  if (!Number.isSafeInteger(current) || current < 0 || current >= Number.MAX_SAFE_INTEGER) {
+    throw new RangeError("Source revision must be an incrementable non-negative safe integer.");
   }
   return current + 1;
 }

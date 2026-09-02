@@ -1,0 +1,112 @@
+.root {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.host {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, Canvas 96%, currentColor 4%);
+}
+
+.host :global(.cm-editor) {
+  min-height: 10rem;
+  color: CanvasText;
+  background: transparent;
+  font-size: 0.95rem;
+}
+
+.host :global(.cm-editor.cm-focused) {
+  outline: 3px solid Highlight;
+  outline-offset: -3px;
+}
+
+.host :global(.cm-scroller) {
+  overflow: auto;
+  font-family: "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  line-height: 1.65;
+}
+
+.host :global(.cm-content) {
+  min-height: 10rem;
+  padding-block: 0.8rem;
+  caret-color: CanvasText;
+}
+
+.host :global(.cm-line) {
+  padding-inline: 0.75rem 1rem;
+}
+
+.host :global(.cm-gutters) {
+  border: 0;
+  border-inline-end: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+  color: color-mix(in srgb, CanvasText 58%, transparent);
+  background: color-mix(in srgb, Canvas 90%, currentColor 10%);
+}
+
+.host :global(.cm-activeLine),
+.host :global(.cm-activeLineGutter) {
+  background: color-mix(in srgb, Highlight 10%, transparent);
+}
+
+.host :global(.cm-selectionBackground) {
+  background: color-mix(in srgb, Highlight 32%, transparent) !important;
+}
+
+.host :global(.cm-guided-active-line) {
+  box-shadow: inset 0.2rem 0 0 Highlight;
+  background: color-mix(in srgb, Highlight 12%, transparent);
+}
+
+.host :global(.cm-guided-changed-value) {
+  border-block-end: 0.16rem solid color-mix(in srgb, #188365 82%, CanvasText 18%);
+  background: color-mix(in srgb, #33b88c 16%, transparent);
+}
+
+.host :global(.cm-guided-error-clue) {
+  text-decoration: underline wavy color-mix(in srgb, #b7493a 82%, CanvasText 18%);
+  text-decoration-thickness: 0.11rem;
+  text-underline-offset: 0.18rem;
+  background: color-mix(in srgb, #d96652 12%, transparent);
+}
+
+.assistance {
+  color: color-mix(in srgb, CanvasText 76%, transparent);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.assistance p,
+.diagnosticList {
+  margin: 0;
+}
+
+.diagnosticList {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.4rem 0 0 1.25rem;
+}
+
+.severity {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+@media (forced-colors: active) {
+  .host,
+  .host :global(.cm-gutters) {
+    border-color: CanvasText;
+  }
+
+  .host :global(.cm-guided-active-line),
+  .host :global(.cm-guided-changed-value),
+  .host :global(.cm-guided-error-clue) {
+    forced-color-adjust: none;
+    border-color: Highlight;
+    background: Canvas;
+    color: CanvasText;
+  }
+}

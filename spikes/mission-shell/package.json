@@ -2,14 +2,17 @@
   "name": "@sophia-learns-code/mission-shell-spike",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "description": "Disposable architecture spike for issues #22 and #26; not the production application.",
   "engines": {
     "node": ">=20.9.0"
   },
   "scripts": {
+    "predev": "npm run runtime:assets",
     "dev": "next dev --hostname 127.0.0.1 --port 3100",
     "prebuild": "npm run runtime:assets",
     "build": "next build",
+    "pretypecheck": "next typegen",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest run",
@@ -18,6 +21,7 @@
     "test:e2e:real": "playwright test --grep @real-runtime",
     "test:a11y": "playwright test --grep @accessibility",
     "runtime:assets": "node scripts/copy-pyodide-assets.mjs",
+    "capture:screenshots": "node scripts/capture-screenshots.mjs",
     "measure": "node scripts/measure.mjs",
     "measure:bundle": "node scripts/bundle-report.mjs"
   },
@@ -45,11 +49,12 @@
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
     "@vitejs/plugin-react": "6.1.1",
-    "eslint": "10.9.1",
+    "esbuild": "0.28.2",
+    "eslint": "9.39.5",
     "eslint-config-next": "16.3.4",
     "fake-indexeddb": "6.2.5",
     "jsdom": "30.0.1",
-    "typescript": "7.0.2",
+    "typescript": "6.0.3",
     "vitest": "4.1.11"
   }
 }

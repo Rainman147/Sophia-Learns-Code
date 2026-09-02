@@ -2,8 +2,11 @@ node_modules/
 .next/
 out/
 public/pyodide/
+public/workers/
 playwright-report/
 test-results/
+artifacts/debug/
+AGENTS.md
+CLAUDE.md
 coverage/
 *.tsbuildinfo
-

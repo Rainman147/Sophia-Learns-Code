@@ -1,3 +1,5 @@
-export default function OperationsCenterPlaceholder() {
-  return <main><h1>Variant B · Operations Center + Mission</h1><p>Root integration target.</p></main>;
+import { FirstContactExperience } from "@/src/integration/FirstContactExperience";
+
+export default function OperationsCenterMission() {
+  return <FirstContactExperience variant="operations" />;
 }

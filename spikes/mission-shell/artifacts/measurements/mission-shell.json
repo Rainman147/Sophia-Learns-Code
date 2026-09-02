@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-02T01:27:41.273Z",
+  "status": "complete-with-explicit-gaps",
+  "configuration": {
+    "baseUrl": "http://127.0.0.1:3100",
+    "browser": "chromium",
+    "output": "artifacts/measurements/mission-shell.json",
+    "route": "/direct/",
+    "warmRuns": 12
+  },
+  "environment": {
+    "os": "win32 10.0.26200 x64",
+    "logicalCpuCount": 32,
+    "totalHostMemoryBytes": 68640825344,
+    "nodeVersion": "v24.18.1",
+    "browserName": "chromium",
+    "browserVersion": "151.0.7922.34",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    }
+  },
+  "observations": {
+    "navigationAndFui": {
+      "status": "measured",
+      "method": "Wall clock from navigation start until the labelled editor and enabled Run control are available.",
+      "firstUsefulInterfaceMs": 482.24,
+      "navigationTiming": {
+        "domContentLoadedMs": 131,
+        "loadEventMs": 238.90000009536743,
+        "responseEndMs": 94.20000004768372,
+        "transferSize": 3594,
+        "encodedBodySize": 3294
+      }
+    },
+    "editorInput": {
+      "status": "measured",
+      "method": "Per-character wall time through Playwright insertText followed by one animation frame; this is a responsiveness proxy.",
+      "distribution": {
+        "count": 10,
+        "minMs": 15.61,
+        "medianMs": 16.8,
+        "p95Ms": 25.95,
+        "maxMs": 25.95,
+        "meanMs": 17.51,
+        "samplesMs": [
+          25.95,
+          17.22,
+          15.61,
+          17.07,
+          17.31,
+          17.1,
+          15.83,
+          16.28,
+          16.8,
+          15.98
+        ]
+      }
+    },
+    "scriptedWarm": {
+      "status": "measured",
+      "method": "Repeated valid executions through the rendered shell using the scripted ExecutionRuntime.",
+      "distribution": {
+        "count": 12,
+        "minMs": 92.88,
+        "medianMs": 103.51,
+        "p95Ms": 179.08,
+        "maxMs": 179.08,
+        "meanMs": 111.2,
+        "samplesMs": [
+          108.23,
+          179.08,
+          103.51,
+          93.73,
+          96.9,
+          103.99,
+          101.83,
+          118.94,
+          96.1,
+          120.18,
+          92.88,
+          119.08
+        ]
+      }
+    },
+    "realRuntime": {
+      "status": "measured",
+      "method": "Cold and repeated warm executions through the real Pyodide worker selected by the runtime query parameter.",
+      "coldWallMs": 1574.65,
+      "coldRuntimeMetrics": {
+        "sourceRevision": "1",
+        "requestId": "run-1788312463952-1",
+        "initializeMs": 1640.5,
+        "executeMs": 5.8999998569488525,
+        "totalMs": 1540,
+        "workerGeneration": 1,
+        "text": "Real cold\n"
+      },
+      "warmDistribution": {
+        "count": 12,
+        "minMs": 52.51,
+        "medianMs": 55.65,
+        "p95Ms": 70.85,
+        "maxMs": 70.85,
+        "meanMs": 59.81,
+        "samplesMs": [
+          68.53,
+          70.85,
+          52.51,
+          54.23,
+          53.14,
+          70.55,
+          55.66,
+          53.18,
+          55.65,
+          63.6,
+          54.21,
+          65.61
+        ]
+      }
+    },
+    "cancellationAndReplacement": {
+      "status": "measured",
+      "method": "Cancel a non-terminating real run, wait for replacement readiness, then execute valid source.",
+      "cancellationMs": 1321.48,
+      "replacementAndValidRunMs": 67.17,
+      "sourcePreservedUntilReplacement": true,
+      "recoveryRuntimeMetrics": {
+        "sourceRevision": "15",
+        "requestId": "run-1788312468017-15",
+        "initializeMs": 0,
+        "executeMs": 2.200000047683716,
+        "totalMs": 13.400000095367432,
+        "workerGeneration": 2,
+        "text": "Recovered\n"
+      }
+    },
+    "staleDisplay": {
+      "status": "measured",
+      "method": "Start a delayed real run, supersede it with a newer revision, and inspect the final rendered revision and text.",
+      "currentOutputDisplayed": true,
+      "staleOutputAbsent": true,
+      "displayedRevision": "17",
+      "currentSourceRevision": "17",
+      "revisionsMatch": true
+    },
+    "memory": {
+      "status": "measured",
+      "method": "Chromium Performance domain JSHeapUsedSize before and after the real repeated-run sequence.",
+      "jsHeapUsedBytesBefore": 21295072,
+      "jsHeapUsedBytesAfter": 20877300,
+      "jsHeapUsedDeltaBytes": -417772,
+      "jsHeapTotalBytesBefore": 32210944,
+      "jsHeapTotalBytesAfter": 36929536,
+      "limitation": "Does not include Worker or WebAssembly linear memory and therefore undercounts Pyodide."
+    },
+    "idleCpuProxy": {
+      "status": "measured",
+      "method": "Difference in Chromium Performance TaskDuration across a two-second no-interaction window.",
+      "windowMs": 2011.78,
+      "taskDurationMs": 0.35,
+      "taskDurationShare": 0
+    },
+    "pyodideAssetResponses": {
+      "status": "observed",
+      "method": "Network response headers captured during the real-runtime phase.",
+      "responses": [
+        {
+          "url": "http://127.0.0.1:3100/direct/?runtime=pyodide&measurement=1",
+          "status": 200,
+          "cacheControl": "no-cache, must-revalidate",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/workers/pyodide.worker.mjs",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.mjs",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/python_stdlib.zip",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": 2545564,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide-lock.json",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.wasm",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.mjs",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/workers/pyodide.worker.mjs",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.mjs",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide-lock.json",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/python_stdlib.zip",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.wasm",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.mjs",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/workers/pyodide.worker.mjs",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.mjs",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide-lock.json",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/python_stdlib.zip",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.wasm",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.mjs",
+          "status": 200,
+          "cacheControl": "public, max-age=0",
+          "contentLength": null,
+          "fromServiceWorker": false
+        }
+      ],
+      "limitation": "A warm browser-cache run must be repeated separately to establish transfer-cache behavior."
+    }
+  },
+  "caveats": [
+    "Playwright wall time includes automation and rendering overhead; compare like-for-like runs, not absolute input latency.",
+    "Chromium JS heap metrics omit Web Worker and WebAssembly linear memory, so they cannot establish Pyodide's total memory use.",
+    "Idle TaskDuration is a coarse browser-process proxy, not a battery or power measurement.",
+    "A screen reader and representative learner hardware still require manual observation."
+  ]
+}
