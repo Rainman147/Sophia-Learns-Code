@@ -1,10 +1,15 @@
 # Visual and interaction inspection record
 
-**Prototype:** Experience Lab 0  
-**Routes:** `/direct`, `/operations-center`  
-**Browser:** Chrome through the browser-control lane  
-**Laptop viewport:** 1440×1000  
-**Narrow viewport:** 390×844 (375 CSS-pixel document width after scrollbar)  
+**Prototype:** Experience Lab 0
+
+**Routes:** `/direct`, `/operations-center`
+
+**Browser:** Chrome through the browser-control lane
+
+**Laptop viewport:** 1440×1000
+
+**Narrow viewport:** 390×844 (375 CSS-pixel document width after scrollbar)
+
 **Data:** synthetic only
 
 ## Inspected states
@@ -66,16 +71,16 @@
 
 | Capture | Purpose |
 |---|---|
-| `screenshots/direct-laptop-entry.png` | Variant A first Mission state |
-| `screenshots/direct-laptop-error.png` | calm error and recovery packet |
-| `screenshots/direct-laptop-debrief.png` | honest evidence and restrained reward |
-| `screenshots/operations-center-laptop-entry.png` | Variant B initial Center |
-| `screenshots/operations-center-laptop-complete.png` | visibly changed Center |
-| `screenshots/direct-narrow-entry.png` | narrow Variant A top hierarchy |
-| `screenshots/direct-narrow-action.png` | narrow Console-to-action ordering |
-| `screenshots/direct-narrow-error.png` | narrow recovery packet and action |
-| `screenshots/operations-center-narrow-complete.png` | narrow changed Center header |
-| `screenshots/operations-center-narrow-actions.png` | narrow Case and recommendation stack |
+| `screenshots/direct-laptop-entry.jpg` | Variant A first Mission state |
+| `screenshots/direct-laptop-error.jpg` | calm error and recovery packet |
+| `screenshots/direct-laptop-debrief.jpg` | honest evidence and restrained reward |
+| `screenshots/operations-center-laptop-entry.jpg` | Variant B initial Center |
+| `screenshots/operations-center-laptop-complete.jpg` | visibly changed Center |
+| `screenshots/direct-narrow-entry.jpg` | narrow Variant A top hierarchy |
+| `screenshots/direct-narrow-action.jpg` | narrow Console-to-action ordering |
+| `screenshots/direct-narrow-error.jpg` | narrow recovery packet and action |
+| `screenshots/operations-center-narrow-complete.jpg` | narrow changed Center header |
+| `screenshots/operations-center-narrow-actions.jpg` | narrow Case and recommendation stack |
 
 The captures document engineering inspection only. They do not contain or imply
 learner observations, preferences, or a winning variant.
