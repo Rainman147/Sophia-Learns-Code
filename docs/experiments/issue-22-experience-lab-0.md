@@ -167,7 +167,7 @@ learner.
 | Boundary | Variant A | Variant B | Observation target |
 |---|---|---|---|
 | Entry | Mission cold open → Run message | Center → Open First Contact → Run message | Does the extra boundary orient, distract, or merely delay? |
-| During Mission | Identical eight-stage Mission progression | Identical eight-stage Mission progression | Confirm the shell treatment does not change task comprehension. |
+| During Mission | Identical ten-state Mission progression | Identical ten-state Mission progression | Confirm the shell treatment does not change task comprehension. |
 | Completion | Debrief → compact capability panel | Debrief → changed Center | Can the learner explain capability evidence and why the Case changed? |
 | Stop | Stop → saved-state screen → Resume | Stop → saved-state screen → Resume | Does Stop feel safe and final enough without losing progress? |
 | Return | Reload restores current boundary | Reload restores current boundary | Can the learner reorient without facilitation? |
