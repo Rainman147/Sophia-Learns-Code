@@ -32,6 +32,17 @@ test("@real-runtime real Pyodide output, cancellation, replacement, stale reject
 
   await page.getByRole("button", { name: /^Continue$/i }).click();
   await expectStage(page, "personalize");
+
+  const unmatchedQuoteSource = 'print("Real Python clue)';
+  await setSource(page, unmatchedQuoteSource);
+  await page.getByRole("button", { name: /^Run(?: Python| code)?$/i }).click();
+  await expectStage(page, "personalize-result", 60_000);
+  await expect(output(page)).toHaveAttribute("data-execution-status", "error");
+  await expect(
+    page.getByText(/opening quotation mark without a matching closing quotation mark/i).first(),
+  ).toBeVisible();
+  expect(await currentSource(page)).toBe(unmatchedQuoteSource);
+
   const infiniteSource = "while True: pass";
   await setSource(page, infiniteSource);
   await page.getByRole("button", { name: /^Run(?: Python| code)?$/i }).click();

@@ -213,6 +213,9 @@ async function execute(message: Extract<RuntimeToWorkerMessage, { type: "run" }>
     if (capture.stderr.length === 0) {
       capture.appendStderr(rawError);
     }
+    const normalizationText = [rawError, capture.stderr]
+      .filter((value, index, values) => value.length > 0 && values.indexOf(value) === index)
+      .join("\n");
 
     result = capture.exceeded
       ? {
@@ -235,7 +238,7 @@ async function execute(message: Extract<RuntimeToWorkerMessage, { type: "run" }>
           status: "error",
           stdout: capture.stdout,
           stderr: capture.stderr,
-          error: normalizeExecutionError(error),
+          error: normalizeExecutionError(normalizationText),
           executeMs: nonNegativeDuration(startedAt),
           outputBytes: capture.outputBytes,
         };

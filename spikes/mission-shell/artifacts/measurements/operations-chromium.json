@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T01:28:39.966Z",
+  "generatedAt": "2026-09-02T01:37:11.869Z",
   "status": "complete-with-explicit-gaps",
   "configuration": {
     "baseUrl": "http://127.0.0.1:3100",
@@ -25,13 +25,13 @@
     "navigationAndFui": {
       "status": "measured",
       "method": "Wall clock from navigation start until the labelled editor and enabled Run control are available.",
-      "firstUsefulInterfaceMs": 445.53,
+      "firstUsefulInterfaceMs": 439.19,
       "navigationTiming": {
-        "domContentLoadedMs": 77.09999990463257,
-        "loadEventMs": 179.40000009536743,
-        "responseEndMs": 64.90000009536743,
-        "transferSize": 3594,
-        "encodedBodySize": 3294
+        "domContentLoadedMs": 94.5,
+        "loadEventMs": 187.10000014305115,
+        "responseEndMs": 71.60000014305115,
+        "transferSize": 3593,
+        "encodedBodySize": 3293
       }
     },
     "editorInput": {
@@ -39,22 +39,22 @@
       "method": "Per-character wall time through Playwright insertText followed by one animation frame; this is a responsiveness proxy.",
       "distribution": {
         "count": 10,
-        "minMs": 15.92,
-        "medianMs": 16.88,
-        "p95Ms": 21.4,
-        "maxMs": 21.4,
-        "meanMs": 17.08,
+        "minMs": 16.35,
+        "medianMs": 16.76,
+        "p95Ms": 20.67,
+        "maxMs": 20.67,
+        "meanMs": 17.1,
         "samplesMs": [
-          21.4,
-          16.3,
-          17.17,
-          16.88,
-          15.99,
-          17.09,
-          15.92,
-          17.11,
-          17.04,
-          15.93
+          20.67,
+          16.41,
+          16.99,
+          17.22,
+          16.42,
+          16.94,
+          16.35,
+          16.76,
+          16.83,
+          16.42
         ]
       }
     },
@@ -63,56 +63,56 @@
       "method": "Repeated valid executions through the rendered shell using the scripted ExecutionRuntime.",
       "distribution": {
         "count": 3,
-        "minMs": 98.51,
-        "medianMs": 103.14,
-        "p95Ms": 185.97,
-        "maxMs": 185.97,
-        "meanMs": 129.21,
+        "minMs": 88.99,
+        "medianMs": 99.6,
+        "p95Ms": 199.06,
+        "maxMs": 199.06,
+        "meanMs": 129.22,
         "samplesMs": [
-          98.51,
-          185.97,
-          103.14
+          99.6,
+          199.06,
+          88.99
         ]
       }
     },
     "realRuntime": {
       "status": "measured",
       "method": "Cold and repeated warm executions through the real Pyodide worker selected by the runtime query parameter.",
-      "coldWallMs": 1327.03,
+      "coldWallMs": 1321.43,
       "coldRuntimeMetrics": {
         "sourceRevision": "1",
-        "requestId": "run-1788312521380-1",
-        "initializeMs": 1457.6000001430511,
-        "executeMs": 4.400000095367432,
-        "totalMs": 1281.4000000953674,
+        "requestId": "run-1788313033261-1",
+        "initializeMs": 1445,
+        "executeMs": 5.300000190734863,
+        "totalMs": 1283.2999999523163,
         "workerGeneration": 1,
         "text": "Real cold\n"
       },
       "warmDistribution": {
         "count": 3,
-        "minMs": 56.99,
-        "medianMs": 57.73,
-        "p95Ms": 58.01,
-        "maxMs": 58.01,
-        "meanMs": 57.58,
+        "minMs": 56.98,
+        "medianMs": 57.87,
+        "p95Ms": 58.19,
+        "maxMs": 58.19,
+        "meanMs": 57.68,
         "samplesMs": [
-          56.99,
-          58.01,
-          57.73
+          56.98,
+          58.19,
+          57.87
         ]
       }
     },
     "cancellationAndReplacement": {
       "status": "measured",
       "method": "Cancel a non-terminating real run, wait for replacement readiness, then execute valid source.",
-      "cancellationMs": 1189.91,
-      "replacementAndValidRunMs": 65.08,
+      "cancellationMs": 1204.28,
+      "replacementAndValidRunMs": 69.87,
       "sourcePreservedUntilReplacement": true,
       "recoveryRuntimeMetrics": {
         "sourceRevision": "6",
-        "requestId": "run-1788312524231-6",
+        "requestId": "run-1788313036126-6",
         "initializeMs": 0,
-        "executeMs": 1.7999999523162842,
+        "executeMs": 1.6999998092651367,
         "totalMs": 14.5,
         "workerGeneration": 2,
         "text": "Recovered\n"
@@ -130,17 +130,17 @@
     "memory": {
       "status": "measured",
       "method": "Chromium Performance domain JSHeapUsedSize before and after the real repeated-run sequence.",
-      "jsHeapUsedBytesBefore": 12931152,
-      "jsHeapUsedBytesAfter": 16603424,
-      "jsHeapUsedDeltaBytes": 3672272,
-      "jsHeapTotalBytesBefore": 31686656,
-      "jsHeapTotalBytesAfter": 31686656,
+      "jsHeapUsedBytesBefore": 19420956,
+      "jsHeapUsedBytesAfter": 23097460,
+      "jsHeapUsedDeltaBytes": 3676504,
+      "jsHeapTotalBytesBefore": 31948800,
+      "jsHeapTotalBytesAfter": 35880960,
       "limitation": "Does not include Worker or WebAssembly linear memory and therefore undercounts Pyodide."
     },
     "idleCpuProxy": {
       "status": "measured",
       "method": "Difference in Chromium Performance TaskDuration across a two-second no-interaction window.",
-      "windowMs": 2014.54,
+      "windowMs": 2006.81,
       "taskDurationMs": 0.1,
       "taskDurationShare": 0
     },

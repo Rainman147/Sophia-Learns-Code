@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T01:27:41.273Z",
+  "generatedAt": "2026-09-02T01:36:13.523Z",
   "status": "complete-with-explicit-gaps",
   "configuration": {
     "baseUrl": "http://127.0.0.1:3100",
@@ -25,11 +25,11 @@
     "navigationAndFui": {
       "status": "measured",
       "method": "Wall clock from navigation start until the labelled editor and enabled Run control are available.",
-      "firstUsefulInterfaceMs": 482.24,
+      "firstUsefulInterfaceMs": 389.16,
       "navigationTiming": {
-        "domContentLoadedMs": 131,
-        "loadEventMs": 238.90000009536743,
-        "responseEndMs": 94.20000004768372,
+        "domContentLoadedMs": 87.20000004768372,
+        "loadEventMs": 178.5,
+        "responseEndMs": 64.79999995231628,
         "transferSize": 3594,
         "encodedBodySize": 3294
       }
@@ -39,22 +39,22 @@
       "method": "Per-character wall time through Playwright insertText followed by one animation frame; this is a responsiveness proxy.",
       "distribution": {
         "count": 10,
-        "minMs": 15.61,
-        "medianMs": 16.8,
-        "p95Ms": 25.95,
-        "maxMs": 25.95,
-        "meanMs": 17.51,
+        "minMs": 15.88,
+        "medianMs": 16.81,
+        "p95Ms": 21.05,
+        "maxMs": 21.05,
+        "meanMs": 17.13,
         "samplesMs": [
-          25.95,
-          17.22,
-          15.61,
-          17.07,
-          17.31,
-          17.1,
-          15.83,
-          16.28,
-          16.8,
-          15.98
+          21.05,
+          16.39,
+          16.16,
+          17.02,
+          18.22,
+          15.88,
+          16.81,
+          16.94,
+          15.96,
+          16.86
         ]
       }
     },
@@ -63,75 +63,75 @@
       "method": "Repeated valid executions through the rendered shell using the scripted ExecutionRuntime.",
       "distribution": {
         "count": 12,
-        "minMs": 92.88,
-        "medianMs": 103.51,
-        "p95Ms": 179.08,
-        "maxMs": 179.08,
-        "meanMs": 111.2,
+        "minMs": 86.54,
+        "medianMs": 90.21,
+        "p95Ms": 184.08,
+        "maxMs": 184.08,
+        "meanMs": 98.97,
         "samplesMs": [
-          108.23,
-          179.08,
-          103.51,
-          93.73,
-          96.9,
-          103.99,
-          101.83,
-          118.94,
-          96.1,
-          120.18,
-          92.88,
-          119.08
+          98.49,
+          184.08,
+          88.98,
+          86.54,
+          89.16,
+          91.12,
+          91.07,
+          90.21,
+          101.18,
+          90.52,
+          87.77,
+          88.58
         ]
       }
     },
     "realRuntime": {
       "status": "measured",
       "method": "Cold and repeated warm executions through the real Pyodide worker selected by the runtime query parameter.",
-      "coldWallMs": 1574.65,
+      "coldWallMs": 1381.85,
       "coldRuntimeMetrics": {
         "sourceRevision": "1",
-        "requestId": "run-1788312463952-1",
-        "initializeMs": 1640.5,
-        "executeMs": 5.8999998569488525,
-        "totalMs": 1540,
+        "requestId": "run-1788312975863-1",
+        "initializeMs": 1457.9000000953674,
+        "executeMs": 4.799999952316284,
+        "totalMs": 1338.6000001430511,
         "workerGeneration": 1,
         "text": "Real cold\n"
       },
       "warmDistribution": {
         "count": 12,
-        "minMs": 52.51,
-        "medianMs": 55.65,
-        "p95Ms": 70.85,
-        "maxMs": 70.85,
-        "meanMs": 59.81,
+        "minMs": 57.41,
+        "medianMs": 59.58,
+        "p95Ms": 60.59,
+        "maxMs": 60.59,
+        "meanMs": 59.29,
         "samplesMs": [
-          68.53,
-          70.85,
-          52.51,
-          54.23,
-          53.14,
-          70.55,
-          55.66,
-          53.18,
-          55.65,
-          63.6,
-          54.21,
-          65.61
+          59.28,
+          57.54,
+          59.64,
+          59.69,
+          58.82,
+          59.09,
+          60.06,
+          57.41,
+          60,
+          59.58,
+          59.74,
+          60.59
         ]
       }
     },
     "cancellationAndReplacement": {
       "status": "measured",
       "method": "Cancel a non-terminating real run, wait for replacement readiness, then execute valid source.",
-      "cancellationMs": 1321.48,
-      "replacementAndValidRunMs": 67.17,
+      "cancellationMs": 1204.36,
+      "replacementAndValidRunMs": 68.66,
       "sourcePreservedUntilReplacement": true,
       "recoveryRuntimeMetrics": {
         "sourceRevision": "15",
-        "requestId": "run-1788312468017-15",
+        "requestId": "run-1788312979528-15",
         "initializeMs": 0,
-        "executeMs": 2.200000047683716,
-        "totalMs": 13.400000095367432,
+        "executeMs": 1.7999999523162842,
+        "totalMs": 16,
         "workerGeneration": 2,
         "text": "Recovered\n"
       }
@@ -148,18 +148,18 @@
     "memory": {
       "status": "measured",
       "method": "Chromium Performance domain JSHeapUsedSize before and after the real repeated-run sequence.",
-      "jsHeapUsedBytesBefore": 21295072,
-      "jsHeapUsedBytesAfter": 20877300,
-      "jsHeapUsedDeltaBytes": -417772,
+      "jsHeapUsedBytesBefore": 21210704,
+      "jsHeapUsedBytesAfter": 22802528,
+      "jsHeapUsedDeltaBytes": 1591824,
       "jsHeapTotalBytesBefore": 32210944,
-      "jsHeapTotalBytesAfter": 36929536,
+      "jsHeapTotalBytesAfter": 37191680,
       "limitation": "Does not include Worker or WebAssembly linear memory and therefore undercounts Pyodide."
     },
     "idleCpuProxy": {
       "status": "measured",
       "method": "Difference in Chromium Performance TaskDuration across a two-second no-interaction window.",
-      "windowMs": 2011.78,
-      "taskDurationMs": 0.35,
+      "windowMs": 2001.33,
+      "taskDurationMs": 0.1,
       "taskDurationShare": 0
     },
     "pyodideAssetResponses": {
@@ -202,14 +202,14 @@
           "fromServiceWorker": false
         },
         {
-          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.wasm",
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.mjs",
           "status": 200,
           "cacheControl": "public, max-age=0",
           "contentLength": null,
           "fromServiceWorker": false
         },
         {
-          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.mjs",
+          "url": "http://127.0.0.1:3100/pyodide/pyodide.asm.wasm",
           "status": 200,
           "cacheControl": "public, max-age=0",
           "contentLength": null,

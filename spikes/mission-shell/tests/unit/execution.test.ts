@@ -5,6 +5,7 @@ import {
   RUNTIME_CANCELLATION_FIXTURE_SOURCE,
   RUNTIME_CANCELLATION_FIXTURE_TASK_ID,
 } from "../../src/execution";
+import { normalizeExecutionError } from "../../src/execution/errors";
 import { runRequest } from "./fixtures";
 
 const runtimes = new Set<ExecutionRuntime>();
@@ -37,6 +38,24 @@ async function waitForPhase(
 }
 
 describe("scripted ExecutionRuntime contract", () => {
+  it("normalizes error-like values from a different JavaScript realm", () => {
+    const foreignPythonError = {
+      name: "PythonError",
+      message:
+        'File "mission-first-contact.py", line 1\nSyntaxError: unterminated string literal (detected at line 1)',
+      toString() {
+        return `PythonError: ${this.message}`;
+      },
+    };
+
+    expect(normalizeExecutionError(foreignPythonError)).toMatchObject({
+      category: "syntax",
+      code: "unmatched-quote",
+      line: 1,
+      exceptionType: "SyntaxError",
+    });
+  });
+
   it("initializes once, publishes lifecycle status, and executes valid output", async () => {
     const statuses: RuntimeStatus[] = [];
     const activeRuntime = runtime({

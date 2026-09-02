@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T01:27:58.932Z",
+  "generatedAt": "2026-09-02T01:36:30.585Z",
   "status": "complete-with-explicit-gaps",
   "configuration": {
     "baseUrl": "http://127.0.0.1:3100",
@@ -25,13 +25,13 @@
     "navigationAndFui": {
       "status": "measured",
       "method": "Wall clock from navigation start until the labelled editor and enabled Run control are available.",
-      "firstUsefulInterfaceMs": 750.43,
+      "firstUsefulInterfaceMs": 627.05,
       "navigationTiming": {
-        "domContentLoadedMs": 207,
-        "loadEventMs": 387,
-        "responseEndMs": 67,
-        "transferSize": 3594,
-        "encodedBodySize": 3294
+        "domContentLoadedMs": 180,
+        "loadEventMs": 292,
+        "responseEndMs": 55,
+        "transferSize": 3591,
+        "encodedBodySize": 3291
       }
     },
     "editorInput": {
@@ -39,22 +39,22 @@
       "method": "Per-character wall time through Playwright insertText followed by one animation frame; this is a responsiveness proxy.",
       "distribution": {
         "count": 10,
-        "minMs": 15.68,
-        "medianMs": 16.91,
-        "p95Ms": 32.32,
-        "maxMs": 32.32,
-        "meanMs": 18.35,
+        "minMs": 16.19,
+        "medianMs": 16.57,
+        "p95Ms": 16.94,
+        "maxMs": 16.94,
+        "meanMs": 16.58,
         "samplesMs": [
-          32.32,
-          18.27,
-          17.42,
-          15.68,
-          17.33,
-          16.13,
-          15.95,
-          16.91,
-          16.95,
-          16.58
+          16.19,
+          16.87,
+          16.29,
+          16.66,
+          16.94,
+          16.31,
+          16.74,
+          16.73,
+          16.47,
+          16.57
         ]
       }
     },
@@ -63,75 +63,75 @@
       "method": "Repeated valid executions through the rendered shell using the scripted ExecutionRuntime.",
       "distribution": {
         "count": 12,
-        "minMs": 108.33,
-        "medianMs": 113.21,
-        "p95Ms": 160.76,
-        "maxMs": 160.76,
-        "meanMs": 117.54,
+        "minMs": 104.64,
+        "medianMs": 108.85,
+        "p95Ms": 152.8,
+        "maxMs": 152.8,
+        "meanMs": 113.62,
         "samplesMs": [
-          114.8,
-          160.76,
-          118.05,
-          110.64,
-          116.83,
-          113.21,
-          114.59,
-          117.91,
-          111.2,
-          108.33,
-          112.69,
-          111.48
+          118.7,
+          152.8,
+          104.64,
+          107.8,
+          108.2,
+          105.69,
+          110.6,
+          109.45,
+          120.31,
+          107.16,
+          108.85,
+          109.21
         ]
       }
     },
     "realRuntime": {
       "status": "measured",
       "method": "Cold and repeated warm executions through the real Pyodide worker selected by the runtime query parameter.",
-      "coldWallMs": 9012.45,
+      "coldWallMs": 8256.47,
       "coldRuntimeMetrics": {
         "sourceRevision": "1",
-        "requestId": "run-1788312482720-1",
-        "initializeMs": 9335,
-        "executeMs": 4,
-        "totalMs": 8907,
+        "requestId": "run-1788312993893-1",
+        "initializeMs": 8528,
+        "executeMs": 3,
+        "totalMs": 8110,
         "workerGeneration": 1,
         "text": "Real cold\n"
       },
       "warmDistribution": {
         "count": 12,
-        "minMs": 55.31,
-        "medianMs": 71.09,
-        "p95Ms": 81.22,
-        "maxMs": 81.22,
-        "meanMs": 69.62,
+        "minMs": 52.49,
+        "medianMs": 57.28,
+        "p95Ms": 62.46,
+        "maxMs": 62.46,
+        "meanMs": 57.45,
         "samplesMs": [
-          75.86,
-          55.31,
-          60.45,
-          75.99,
-          71.09,
-          72.8,
-          81.22,
-          66.22,
-          64.45,
-          75.77,
-          75.17,
-          61.15
+          54.61,
+          54.29,
+          55.83,
+          57.93,
+          57.28,
+          57.02,
+          59.6,
+          58.7,
+          58.96,
+          60.3,
+          62.46,
+          52.49
         ]
       }
     },
     "cancellationAndReplacement": {
       "status": "measured",
       "method": "Cancel a non-terminating real run, wait for replacement readiness, then execute valid source.",
-      "cancellationMs": 9151.53,
-      "replacementAndValidRunMs": 56.63,
+      "cancellationMs": 8521.98,
+      "replacementAndValidRunMs": 68.7,
       "sourcePreservedUntilReplacement": true,
       "recoveryRuntimeMetrics": {
         "sourceRevision": "15",
-        "requestId": "run-1788312502503-15",
+        "requestId": "run-1788313011926-15",
         "initializeMs": 0,
         "executeMs": 4,
-        "totalMs": 7,
+        "totalMs": 8,
         "workerGeneration": 2,
         "text": "Recovered\n"
       }

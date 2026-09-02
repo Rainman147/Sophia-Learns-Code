@@ -22,11 +22,12 @@ No workstreams edited the same contract files concurrently or created competing 
 6. Measurement exposed two harness races: hydration was mistaken for a route decision, and CodeMirror `fill()` could append under concurrency. The shared automation path now waits for explicit route markers and replaces source with keyboard-realistic select-all/input plus exact-source assertions.
 7. Visual QA exposed missing CSS custom properties on the direct completion boundary and framework dev UI in captures. The real CTA contrast was fixed; the capture script suppresses only the development badge.
 8. Scripted review mode previously inherited “real Python” completion copy. Runtime-aware copy now keeps scripted evidence explicitly synthetic while the default Pyodide route retains the real-execution claim.
+9. Firefox exposed Pyodide failures as cross-realm error-like objects, so `instanceof Error` lost the syntax detail. Error normalization now reads bounded `name`, `message`, and `stack` fields defensively, combines captured stderr with the thrown value, and is covered by unit and real-browser unmatched-quote recovery checks.
 
 ## Integrated verification
 
 - TypeScript and ESLint: pass.
-- Vitest: 37/37 pass across seven files.
+- Vitest: 38/38 pass across seven files.
 - Playwright: 54 pass, six intentional project-scope skips, zero failures across 60 cases in Chromium and Firefox at laptop and narrow viewports.
 - Both laptop engines execute real Pyodide, cancellation, worker generation replacement, stale-result rejection, source preservation, and recovery.
 - Static Next build: pass for `/`, `/direct`, and `/operations`.

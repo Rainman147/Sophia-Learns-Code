@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T01:29:23.931Z",
+  "generatedAt": "2026-09-02T01:40:40.777Z",
   "projectRoot": "C:\\Users\\Rainman\\Documents\\Codex\\2026-09-01\\model-gpt-5-6-sol-intelligence\\spikes\\mission-shell",
   "buildStatus": "build-found",
   "nextChunks": {
@@ -103,9 +103,9 @@
         "static/chunks/310vm2bl3xxpt.js",
         "static/chunks/344n2zhqbh4pn.js",
         "static/chunks/turbopack-0td869ukh0v94.js",
-        "static/xmh6EINtdpRpntz9ssg1c/_buildManifest.js",
-        "static/xmh6EINtdpRpntz9ssg1c/_clientMiddlewareManifest.js",
-        "static/xmh6EINtdpRpntz9ssg1c/_ssgManifest.js"
+        "static/sV8iWyshr8iIMQ0eqAckS/_buildManifest.js",
+        "static/sV8iWyshr8iIMQ0eqAckS/_clientMiddlewareManifest.js",
+        "static/sV8iWyshr8iIMQ0eqAckS/_ssgManifest.js"
       ],
       "app": []
     },

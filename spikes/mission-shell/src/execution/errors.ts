@@ -4,11 +4,37 @@ const UNMATCHED_QUOTE_PATTERN =
   /unterminated (?:triple-quoted )?string literal|eol while scanning string literal/i;
 
 function errorText(error: unknown): string {
-  if (error instanceof Error) {
-    return error.stack ?? `${error.name}: ${error.message}`;
+  if (typeof error === "string") return error;
+  if ((typeof error !== "object" && typeof error !== "function") || error === null) {
+    return "Unknown execution failure";
   }
 
-  return typeof error === "string" ? error : "Unknown execution failure";
+  const property = (name: "name" | "message" | "stack"): string | undefined => {
+    try {
+      const value = (error as Record<string, unknown>)[name];
+      return typeof value === "string" && value.trim().length > 0 ? value : undefined;
+    } catch {
+      return undefined;
+    }
+  };
+  const name = property("name");
+  const message = property("message");
+  const stack = property("stack");
+  let rendered: string | undefined;
+  try {
+    const value = String(error);
+    if (value && value !== "[object Object]") rendered = value;
+  } catch {
+    rendered = undefined;
+  }
+
+  const candidates = [
+    stack,
+    name && message ? `${name}: ${message}` : message ?? name,
+    rendered,
+  ].filter((value): value is string => Boolean(value));
+  const unique = [...new Set(candidates)];
+  return unique.length > 0 ? unique.join("\n") : "Unknown execution failure";
 }
 
 function sourceLine(error: string): number | undefined {
