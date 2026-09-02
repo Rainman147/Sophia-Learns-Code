@@ -1,0 +1,55 @@
+{
+  "name": "@sophia-learns-code/mission-shell-spike",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Disposable architecture spike for issues #22 and #26; not the production application.",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3100",
+    "prebuild": "npm run runtime:assets",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:real": "playwright test --grep @real-runtime",
+    "test:a11y": "playwright test --grep @accessibility",
+    "runtime:assets": "node scripts/copy-pyodide-assets.mjs",
+    "measure": "node scripts/measure.mjs",
+    "measure:bundle": "node scripts/bundle-report.mjs"
+  },
+  "dependencies": {
+    "@codemirror/commands": "6.11.0",
+    "@codemirror/lang-python": "6.2.1",
+    "@codemirror/lint": "6.9.7",
+    "@codemirror/state": "6.7.2",
+    "@codemirror/view": "6.43.10",
+    "@xstate/react": "6.1.0",
+    "idb": "8.0.3",
+    "next": "16.3.4",
+    "pyodide": "314.0.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "xstate": "5.32.6"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.62.1",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.6",
+    "@types/node": "26.4.1",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "@vitejs/plugin-react": "6.1.1",
+    "eslint": "10.9.1",
+    "eslint-config-next": "16.3.4",
+    "fake-indexeddb": "6.2.5",
+    "jsdom": "30.0.1",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}
